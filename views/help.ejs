@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>Supported requests:</p>
+    <table>
+      <tr>
+        <td><a href="/initbin">/initbin/</a></td>
+        <td>/initbin/:bin_id</td>
+        <td></td>
+        <td>Register bin address</td>
+      </tr>
+      <tr>
+        <td><a href="/submitqr/">/submitqr/code/testuser/token</a></td>
+        <td>/submitqr/:code</td>
+        <td></td>
+        <td>Submit QR code</td>
+      </tr>
+      <tr>
+        <td><a href="/trashevent/1/1">/trashevent/1/1/</a></td>
+        <td>/trashevent/:code/:binid</td>
+        <td></td>
+        <td>Register points, get QR code</td>
+      </tr>
+      <tr>
+        <td><a href="/tokens">/tokens</a></td>
+        <td></td>
+        <td></td>
+        <td>List token table for test purposes</td>
+      </tr>
+      <tr>
+        <td><a href="/ad">/ad</a></td>
+        <td></td>
+        <td></td>
+        <td>Returns advert url.</td>
+      </tr>
+      <tr>
+        <td><a href="/points/">/points/username</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>

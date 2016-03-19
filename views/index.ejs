@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <style type="text/css">
+            #qrcode {
+                width:256px;
+                height:256px;
+                
+                margin:0 auto;
+            } 
+
+            body {
+              padding-top: 50px;
+              background-color:#ededed;
+            }
+
+            .starter-template {
+              padding: 240px 15px;
+              text-align: center;
+            }
+
+            .navbar
+            {
+                background: #a1d66a;
+                border-bottom:none;
+            }
+
+            .navbar-inverse .navbar-brand
+            {
+                color: white;
+                font-size: 26px;
+            }
+            .card
+            {
+                border: 1px solid #DADADA;
+                padding-bottom: 20px;
+                background: white;
+                box-shadow: 2px 2px 11px -2px grey;
+            }
+        </style>
+        <meta property="og:url"                content="http://takemytrash.westeurope.cloudapp.azure.com/points/<%= userid %>" />
+        <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="Takemytrash" />
+        <meta property="og:description"        content="My score on TakeMyTrash is <%= points %>! Try to beat that using the TakeMyTrash app!" />
+        <meta property="fb:app_id"             content="951970631565800">
+    </head>
+  <body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" >TakeMyTrash</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <div class="col-sm-6 col-sm-offset-3 card">
+          <h1>Welcome User</h1>
+          <%if (!error) { %>
+            <h2>You collected <%= points %> points so far.</h2>
+          <% } else { %>
+            <h2>User not found</h2>
+          <% } %>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
